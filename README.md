@@ -44,15 +44,15 @@ Urutan yang disarankan: US-01, US-02, US-03, US-04, US-05, US-06, lalu fitur bon
 
 ## Isi repo
 
-| File atau folder | Isi |
-| --- | --- |
-| `AGENTS.md` | Aturan untuk AI agent, dibaca sebelum setiap prompt |
-| `DESIGN.md` | Panduan warna, huruf, dan komponen |
-| `PROMPTS.md` | Jurnal prompt, wajib diisi |
-| `docs/` | Problem statement, PRD, user story, rancangan teknis, skema database, checklist |
-| `lib/toko.js` | Nama toko, nomor WhatsApp, alamat, jam buka |
-| `app/` | Halaman aplikasi |
-| `components/` | Komponen tampilan |
+| File atau folder | Isi                                                                             |
+| ---------------- | ------------------------------------------------------------------------------- |
+| `AGENTS.md`      | Aturan untuk AI agent, dibaca sebelum setiap prompt                             |
+| `DESIGN.md`      | Panduan warna, huruf, dan komponen                                              |
+| `PROMPTS.md`     | Jurnal prompt, wajib diisi                                                      |
+| `docs/`          | Problem statement, PRD, user story, rancangan teknis, skema database, checklist |
+| `lib/toko.js`    | Nama toko, nomor WhatsApp, alamat, jam buka                                     |
+| `app/`           | Halaman aplikasi                                                                |
+| `components/`    | Komponen tampilan                                                               |
 
 ## Menyesuaikan dengan usahamu
 
@@ -74,7 +74,7 @@ Urutan yang disarankan: US-01, US-02, US-03, US-04, US-05, US-06, lalu fitur bon
 
 ## Tentang aplikasi ini
 
-- **Nama usaha:**
-- **Pembuat:**
-- **Link aplikasi:**
-- **Fitur bonus yang dikerjakan:**
+- **Nama usaha:** Rumah Roti Yuyun
+- **Pembuat:** gabriell74
+- **Link aplikasi:** https://katalog-umkm-gabriell74.vercel.app
+- **Fitur bonus yang dikerjakan:** Belum ada (fokus menyelesaikan seluruh fitur wajib US-01 hingga US-06)
