@@ -121,3 +121,17 @@ Terjadi error saat mencoba memuat daftar produk dari database Supabase pada US-0
 - Nilai `SUPABASE_URL` di `.env.local` awalnya terisi `https://...supabase.co/rest/v1/`. Karena `@supabase/supabase-js` secara otomatis menambahkan `/rest/v1/`, request yang terkirim menjadi ganda (`/rest/v1/rest/v1/produk`).
 - Nilai `SUPABASE_URL` di `.env.local` diperbaiki menjadi URL dasar proyek (`https://...supabase.co`).
 - Di `lib/supabase/server.js`, ditambahkan sanitasi pembersihan URL (`replace(/\/rest\/v1\/?$/, "")` dan strip trailing slash) agar ke depannya aplikasi tetap aman terhadap kesalahan serupa.
+
+### US-07 List Produk
+
+**Prompt:**
+Mulai kerjakan US-07 sekarang!
+
+**Hasil:**
+- Mengubah `app/admin/page.jsx` menjadi async Server Component untuk membaca data langsung dari tabel `produk` di Supabase.
+- Menggantikan sumber data contoh (`produkContoh`) dengan hasil query Supabase diurutkan berdasarkan `id`.
+- Data produk di halaman admin `/admin` kini bersumber langsung secara dinamis dari database.
+
+**Perbaikan:**
+Tidak ada kendala.
+

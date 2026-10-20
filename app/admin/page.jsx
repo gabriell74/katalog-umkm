@@ -1,11 +1,38 @@
 import NavAdmin from "@/components/NavAdmin";
 import TabelProduk from "@/components/TabelProduk";
 import Tombol from "@/components/Tombol";
-import { produkContoh } from "@/lib/data-contoh";
+import { buatKoneksiSesiAdmin, buatKoneksiServer } from "@/lib/supabase/server";
 
-export default function HalamanAdmin() {
-  // US-07 (bonus): daftar produk masih memakai data contoh, belum dari database.
-  const daftarProduk = produkContoh;
+export const dynamic = "force-dynamic";
+
+export default async function HalamanAdmin() {
+  let daftarProduk = [];
+
+  try {
+    const supabase = await buatKoneksiSesiAdmin();
+    const { data, error } = await supabase
+      .from("produk")
+      .select("*")
+      .order("id", { ascending: true });
+
+    if (!error && data) {
+      daftarProduk = data;
+    } else {
+      const fallbackClient = buatKoneksiServer();
+      const { data: fallbackData } = await fallbackClient
+        .from("produk")
+        .select("*")
+        .order("id", { ascending: true });
+      daftarProduk = fallbackData || [];
+    }
+  } catch {
+    const fallbackClient = buatKoneksiServer();
+    const { data: fallbackData } = await fallbackClient
+      .from("produk")
+      .select("*")
+      .order("id", { ascending: true });
+    daftarProduk = fallbackData || [];
+  }
 
   return (
     <div className="flex flex-col gap-6 py-8">
